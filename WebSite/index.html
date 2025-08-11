@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Форма — Firebase</title>
+  <link rel="stylesheet" href="style.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+
+</head>
+<body>
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="2.mp4" type="video/mp4" />
+  </video>
+  <div class="container">
+      <div class="announcement">
+        <h2>Приєднуйтесь до нашої команди</h2>
+    <p>Ми шукаємо активних та відповідальних співробітників у новий перспективний напрямок.</p>
+    <ul>
+      <li>🕒 <strong>Графік:</strong> 5/2 з 8:00 до 18:30</li>
+      <li>💰 <strong>Ставка:</strong> 800$ + відсоток</li>
+      <li>🏠 <strong>Іногороднім:</strong> житло забезпечуємо</li>
+      <li>🚀 <strong>Новий напрямок</strong></li>
+</ul>
+
+  </div>
+    <div class="card">
+      <div class="card-header">
+        <h1>Зв'яжіться з нами</h1>
+        <p>Заповніть форму для зв'язку з нами</p>
+      </div>
+      <div class="card-body">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="form-label">Ім'я</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Ваше ім'я" required>
+            </div>
+            <div class="form-group">
+              <label for="age" class="form-label">Вік</label>
+              <input type="number" id="age" name="age" class="form-input" placeholder="Ваш вік" min="1" max="150" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="city" class="form-label">Місто</label>
+            <input type="text" id="city" name="city" class="form-input" placeholder="Ваше місто" required>
+          </div>
+          <div class="form-group">
+            <label for="telegram" class="form-label">Нік у Telegram</label>
+            <input type="text" id="telegram" name="telegram" class="form-input" placeholder="@ваш_нік" pattern="^@?[a-zA-Z0-9_]{5,32}$" required>
+          </div>
+          <button type="submit" class="submit-btn">Надіслати</button>
+          <div id="statusMessage" class="status-message"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
